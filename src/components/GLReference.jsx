@@ -31,7 +31,7 @@ const GLReference = () => {
                     borderRadius: 'var(--radius-md)',
                     padding: '12px'
                 }}>
-                    <div style={{ color: 'var(--color-warning)', fontWeight: 'bold', fontSize: '18px' }}>11 - 19</div>
+                    <div style={{ color: 'var(--color-warning)', fontWeight: 'bold', fontSize: '18px' }}>11 - 20</div>
                     <div style={{ fontWeight: '600', marginTop: '4px' }}>Medium</div>
                     <div className="text-sm text-muted">Consume in moderation</div>
                 </div>
@@ -43,7 +43,7 @@ const GLReference = () => {
                     borderRadius: 'var(--radius-md)',
                     padding: '12px'
                 }}>
-                    <div style={{ color: 'var(--color-danger)', fontWeight: 'bold', fontSize: '18px' }}>20+</div>
+                    <div style={{ color: 'var(--color-danger)', fontWeight: 'bold', fontSize: '18px' }}>&gt; 20</div>
                     <div style={{ fontWeight: '600', marginTop: '4px' }}>High</div>
                     <div className="text-sm text-muted">Limit or avoid</div>
                 </div>

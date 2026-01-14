@@ -34,7 +34,26 @@ const Home = () => {
                 else if (food.name.toLowerCase().includes('apple')) { weightInGrams = quantity * 150; assumptionNote = `Assumed 1 Apple ≈ 150g`; }
                 else if (food.name.toLowerCase().includes('banana')) { weightInGrams = quantity * 120; assumptionNote = `Assumed 1 Banana ≈ 120g`; }
                 else if (food.name.toLowerCase().includes('idli')) { weightInGrams = quantity * 60; assumptionNote = `Assumed 1 Idli ≈ 60g`; }
-                else if (food.name.toLowerCase().includes('dosa')) { weightInGrams = quantity * 80; assumptionNote = `Assumed 1 Dosa ≈ 80g`; }
+                else if (food.name.toLowerCase().includes('dosa')) { weightInGrams = quantity * 120; assumptionNote = `Assumed 1 Medium Dosa ≈ 120g`; }
+                else if (food.name.toLowerCase().includes('samosa')) { weightInGrams = quantity * 80; assumptionNote = `Assumed 1 Samosa ≈ 80g`; }
+                else if (food.name.toLowerCase().includes('kachori')) { weightInGrams = quantity * 75; assumptionNote = `Assumed 1 Kachori ≈ 75g`; }
+                else if (food.name.toLowerCase().includes('vada')) { weightInGrams = quantity * 60; assumptionNote = `Assumed 1 Vada ≈ 60g`; }
+                else if (food.name.toLowerCase().includes('pakora')) { weightInGrams = quantity * 30; assumptionNote = `Assumed 1 Pakora ≈ 30g`; }
+                else if (food.name.toLowerCase().includes('vada pav')) { weightInGrams = quantity * 120; assumptionNote = `Assumed 1 Vada Pav ≈ 120g`; }
+                else if (food.name.toLowerCase().includes('momo')) { weightInGrams = quantity * 30; assumptionNote = `Assumed 1 Momo ≈ 30g`; }
+                else if (food.name.toLowerCase().includes('gulab jamun')) { weightInGrams = quantity * 40; assumptionNote = `Assumed 1 Gulab Jamun ≈ 40g`; }
+                else if (food.name.toLowerCase().includes('rasgulla')) { weightInGrams = quantity * 50; assumptionNote = `Assumed 1 Rasgulla ≈ 50g`; }
+                else if (food.name.toLowerCase().includes('laddu')) { weightInGrams = quantity * 40; assumptionNote = `Assumed 1 Laddu ≈ 40g`; }
+                else if (food.name.toLowerCase().includes('barfi')) { weightInGrams = quantity * 30; assumptionNote = `Assumed 1 Barfi ≈ 30g`; }
+                else if (food.name.toLowerCase().includes('jalebi')) { weightInGrams = quantity * 30; assumptionNote = `Assumed 1 Jalebi ≈ 30g`; }
+                else if (food.name.toLowerCase().includes('bhatura')) { weightInGrams = quantity * 80; assumptionNote = `Assumed 1 Bhatura ≈ 80g`; }
+                else if (food.name.toLowerCase().includes('poori')) { weightInGrams = quantity * 30; assumptionNote = `Assumed 1 Poori ≈ 30g`; }
+                else if (food.name.toLowerCase().includes('panipuri')) { weightInGrams = quantity * 15; assumptionNote = `Assumed 1 Panipuri ≈ 15g`; }
+                else if (food.name.toLowerCase().includes('cookie')) { weightInGrams = quantity * 20; assumptionNote = `Assumed 1 Cookie ≈ 20g`; }
+                else if (food.name.toLowerCase().includes('burger')) { weightInGrams = quantity * 200; assumptionNote = `Assumed 1 Burger ≈ 200g`; }
+                else if (food.name.toLowerCase().includes('pizza')) { weightInGrams = quantity * 100; assumptionNote = `Assumed 1 Slice ≈ 100g`; }
+                else if (food.name.toLowerCase().includes('donut')) { weightInGrams = quantity * 70; assumptionNote = `Assumed 1 Donut ≈ 70g`; }
+                else if (food.name.toLowerCase().includes('spring roll')) { weightInGrams = quantity * 60; assumptionNote = `Assumed 1 Spring Roll ≈ 60g`; }
                 else {
                     weightInGrams = quantity * 50;
                     assumptionNote = `Assumed 1 Piece ≈ 50g`;
@@ -48,8 +67,8 @@ const Home = () => {
         const gl = (food.gi * totalCarbs) / 100;
 
         let severity = 'low';
-        if (gl >= 11 && gl <= 19) severity = 'medium';
-        if (gl >= 20) severity = 'high';
+        if (gl > 10 && gl <= 20) severity = 'medium';
+        if (gl > 20) severity = 'high';
 
         setCalculationResult({ gl, severity, assumptionNote });
         setCurrentFoodName(food.name);
